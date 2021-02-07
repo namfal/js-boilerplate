@@ -1,0 +1,10 @@
+body {
+    background-color: white;
+}
+
+.small-img {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
