@@ -6,15 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./src",
-    "lint-fix": "eslint ./src --fix"
+    "lint-fix": "eslint ./src --fix",
+    "start": "webpack serve --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "webpack": "^5.21.1",
-    "webpack-cli": "^4.5.0"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
@@ -26,6 +25,11 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "html-webpack-plugin": "^5.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack-dev-server": "^3.11.2",
     "style-loader": "^2.0.0"
   }
 }

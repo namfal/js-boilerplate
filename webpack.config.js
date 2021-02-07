@@ -1,16 +1,31 @@
-// webpack.config.js
-const path = require('path') // we require the path core module to help us resolve a directory
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-// this will hold our configuration object
 module.exports = {
-	// we first specify an entry script to webpack
 	entry: './src/index.js',
-	// next is our output file and directory
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js'
 	},
 	mode: 'development',
+	devServer: {
+		contentBase: './dist',
+		port: 9000,
+		hot: true,
+		stats: {
+			children: false,
+			maxModules: 0
+		}
+	},
+	plugins: [
+		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+		new HtmlWebpackPlugin({
+			title: 'JS Boilerplate'
+		}),
+		new webpack.HotModuleReplacementPlugin()
+	],
 	module: {
 		rules: [
 			{
