@@ -1,4 +1,4 @@
-import Image from './js-icon.png'
+import Image from './js.png'
 
 const img = document.createElement('img')
 img.src = Image
