@@ -18,3 +18,7 @@ Lists lint errors.
 ### `yarn lint-fix`
 
 Fixes the lint errors.
+
+## Editing HTML
+
+If you make edits to the `template.html` file, the `HotModuleReplacementPlugin` does not detect changes so you need to do a manual refresh. Feel free to fix this in a PR 😅 
