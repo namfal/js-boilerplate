@@ -19,7 +19,8 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
 		new HtmlWebpackPlugin({
-			title: 'JS Boilerplate'
+			title: 'JS Boilerplate',
+			template: path.resolve(__dirname, './src/template.html')
 		}),
 		new webpack.HotModuleReplacementPlugin()
 	],
