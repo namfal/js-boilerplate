@@ -14,10 +14,7 @@ module.exports = {
 		contentBase: './dist',
 		port: 9000,
 		hot: true,
-		stats: {
-			children: false,
-			maxModules: 0
-		}
+		stats: 'minimal'
 	},
 	plugins: [
 		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
